@@ -1,0 +1,10 @@
+.store_item{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    font-weight: bold;
+}
+.images {
+    width: 400px;
+    height :400px;
+}

@@ -1,0 +1,47 @@
+ 
+.form{
+    
+   color: rosybrown;
+   margin-top: 200px;
+   margin-left: 30%;
+   padding-top: 5px;
+   font-size: medium;
+   font-weight: bold;
+}
+
+.img{
+    background-image: url('../../assets/1437673.webp') ;
+    height: 600px;
+     width: 1350px;
+     position: absolute;
+}
+input[type=text], select {
+   padding: 3px 3px;
+   margin-left: 9%;
+ }
+
+ input[type=password], select{
+   padding: 3px 3px;
+   margin-left: 9%;
+ }
+
+ input[type=number], select{
+   padding: 3px 3px;
+   margin-left: 10%;
+ }
+
+ input[type=date], select{
+   padding: 3px 3px;
+   margin-left: 11%;
+ }
+
+ button[type=submit] {
+   width: 30%;
+   padding: 3px 3px;
+   color: antiquewhite;
+   background-color: darkgray;
+ }
+
+ button[type=submit]:hover {
+   background-color: rosybrown;
+ }

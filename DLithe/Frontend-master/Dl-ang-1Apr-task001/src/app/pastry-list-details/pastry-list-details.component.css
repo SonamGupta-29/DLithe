@@ -1,0 +1,8 @@
+.card_details{
+    display: flex;
+    align-content: flex-start;
+}
+* {
+    margin: 0px;
+    padding: 0px;
+}

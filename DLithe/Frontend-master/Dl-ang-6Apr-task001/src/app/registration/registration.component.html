@@ -1,0 +1,95 @@
+
+<form [formGroup]="registrationForm">
+  <div class=" form-group">
+    <label>Name*</label>
+    <input type="text" class="form-control" formControlName="firstname">
+
+    <div
+      *ngIf="registrationForm.controls['firstname'].touched && registrationForm.controls['firstname'].hasError('required')">
+      <span class="is-invalid">Name is required</span>
+    </div>
+  </div>
+
+  <div class=" form-group">
+    <label>Phone Number*</label>
+    <input type="number" class="form-control" formControlName="phoneNumber">
+
+    <div
+      *ngIf="registrationForm.controls['phoneNumber'].touched && registrationForm.controls['phoneNumber'].hasError('required')">
+      <span class="is-invalid">phone number is required</span>
+    </div>
+  </div>
+
+  <div class=" form-group">
+    <label>Email id*</label>
+    <input type="text" class="form-control" formControlName="emailid">
+
+    <div
+      *ngIf="registrationForm.controls['emailid'].touched && registrationForm.controls['emailid'].hasError('required')">
+      <span class="is-invalid">Email id is required</span>
+    </div>
+  </div>
+
+
+  <div class=" form-group">
+    <label>DOB*</label>
+    <input type="date" class="form-control" formControlName="DOB">
+
+    <div *ngIf="registrationForm.controls['DOB'].touched && registrationForm.controls['DOB'].hasError('required')">
+      <span class="is-invalid">DOB is required</span>
+    </div>
+  </div>
+
+
+  <div class=" form-group">
+    <label> Address </label>
+    <input type="text" class="form-control" formControlName="address">
+  </div>
+
+
+
+  <div class="form-group">
+    <label>City*</label>
+    <select name="city" class="form-control" formControlName="city">
+
+      <div *ngIf="registrationForm.controls['city'].touched && registrationForm.controls['city'].hasError('required')">
+        <span class="is-invalid">city is required</span>
+      </div>
+      <option disabled>Select city</option>
+      <option *ngFor="let city of listOfCity">{{ city}}</option>
+
+    </select>
+  </div>
+
+  <div class=" form-group">
+    <label>Password</label>
+    <input type="password" class="form-control" formControlName="pass">
+  </div>
+
+
+  <div class=" form-group">
+    <label>Confirm Password</label>
+    <input type="password" class="form-control" formControlName="cnfmpass">
+    <div *ngIf="registrationForm.errors">
+      <div *ngIf="registrationForm.errors['doNotMatch']">
+        Password do not match
+      </div>
+      </div>
+    </div>
+
+    <div class=" form-group">
+      <label>PinCode</label>
+      <input type="number" class="form-control" formControlName="PinCode">
+
+      <div
+        *ngIf="registrationForm.controls['PinCode'].touched && registrationForm.controls['PinCode'].hasError('required')">
+        <span class="is-invalid">PinCode is required</span>
+      </div>
+    </div>
+
+
+    <!-- <button type="submit">submit</button> -->
+    <button type="submit" (click)="OnSubmit()">submit</button>
+
+
+</form>

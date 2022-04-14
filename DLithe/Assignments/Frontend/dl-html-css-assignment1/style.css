@@ -1,0 +1,94 @@
+body{
+    background-color: black;
+    margin: 0px;
+    padding: 0px;
+    min-height: 100vh;
+    
+}
+
+.header{
+        color:aliceblue;
+        width: 100%;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    } 
+    
+.btn{
+    background: #fbe148;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+#para {
+      
+        margin-top: 50px;
+        margin-left: 94px;
+        color: aliceblue; 
+       
+    }
+#para #container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.text{
+    width: 100%;
+    color:aliceblue;
+    display: flex;
+    padding: 0%;
+   margin-top: 2%;
+   background-color: #7e7d7480;
+   justify-content: space-between;
+   
+}
+.text-div1{
+    
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 6rem;
+}
+.text-div2{
+    
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 12rem;
+}
+#para #logo{
+    color: aliceblue;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    width:95%;
+    list-style-type: none;
+    padding: 20px ;
+    justify-content: space-between;
+    
+}
+.footer{
+    color: aliceblue;
+    margin-left: 7%;
+    margin-top: 5%;
+    
+}
+
+
+.icons{
+    color: aliceblue;
+    background-color: #7e7d7480;
+    margin-top: 5%;
+   display: flex;
+   
+}
+.icons-left{
+   justify-content: left;
+}
+.icons-right{
+    justify-content: right;
+    
+}
+

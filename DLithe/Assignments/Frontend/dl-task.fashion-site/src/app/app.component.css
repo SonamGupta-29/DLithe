@@ -1,0 +1,21 @@
+.nav li a:hover {
+    color:red;
+}
+.nav{
+    display:flex;
+    padding: 20px;
+    background-color: black;
+    
+}
+.nav li{
+    list-style: none;
+    
+}
+.nav a{
+    text-decoration: none;
+    color:skyblue;
+    padding: 150px;
+}
+.hovertext{
+    color: darkgreen;
+}

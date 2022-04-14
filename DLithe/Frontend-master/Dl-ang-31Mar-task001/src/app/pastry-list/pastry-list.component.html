@@ -1,0 +1,10 @@
+<div class="pastry">
+    <div *ngFor="let items of li ">
+        <mat-card class="cards">
+        <mat-card-title >
+            <p>name:{{items.name}}</p>
+        </mat-card-title>
+        <img mat-card image class="images" [src]="items.path">
+        </mat-card>
+    </div>
+</div>

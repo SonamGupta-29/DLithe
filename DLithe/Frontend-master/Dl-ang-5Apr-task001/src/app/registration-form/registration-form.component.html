@@ -1,0 +1,71 @@
+<form #registrationForm="ngForm">
+    <div class=" form-group">
+    <label for="name">Name</label>
+    <input type="text"  #name="ngModel" name ="name" placeholder="Name" class="form-control" [(ngModel)]="registrationModel.name" [class.is-invalid]="name.valid" required>
+
+    <div class="is-invalid" *ngIf="name.invalid && name.touched">
+     Name is required
+    </div>
+ </div>
+
+ <div class=" form-group">
+    <label for="phonenumber">phone number</label>
+    <input type="number" #phonenumber="ngModel" name="phonenumber" placeholder="phone number" class="form-control" [(ngModel)]="registrationModel.phonenumber" [class.is-invalid]="phonenumber.valid" required>
+
+    <div class="is-invalid" *ngIf="phonenumber.invalid && phonenumber.touched">
+        phonenumber is required
+       </div>
+</div>
+
+<div class=" form-group">
+    <label for="emailid">Email id</label>
+    <input type="text" #emailid="ngModel" name="emailid" placeholder="email id" class="form-control" [(ngModel)]="registrationModel.emailid" [class.is-invalid]="emailid.valid" required>
+
+    <div class="is-invalid" *ngIf="emailid.invalid && emailid.touched">
+        emailid is required
+       </div>
+</div>
+
+
+<div class=" form-group">
+    <label for="DOB">DOB</label>
+    <input type="date" #DOB="ngModel" name="DOB" placeholder="DOB" class="form-control" [(ngModel)]="registrationModel.DOB" [class.is-invalid]="DOB.valid" required>
+
+    <div class="is-invalid" *ngIf="DOB.invalid && DOB.touched">
+        DOB is required
+       </div>
+</div>
+
+
+<div class=" form-group">
+    <label for="address"> address </label>
+    <input type="text" placeholder="address" name="address" class="form-control" [(ngModel)]="registrationModel.address">
+</div>
+
+
+
+    <div class = "form-group">
+    <label for="city">city</label>
+    <select name="city"  #city="ngModel" class="form-control"  [(ngModel)]="registrationModel.city" [class.is-invalid]="city.valid" required>
+
+        <div class="is-invalid" *ngIf="city.invalid && city.touched">
+            pincode is required
+           </div>
+         <option disabled>Select city</option>
+        <option *ngFor="let city of listOfCity">{{ city}}</option>
+        
+    </select>
+    </div>
+
+    <div class=" form-group">
+        <label for="pincode">Pin Code</label>
+        <input type="number" #pincode="ngModel" name="pincode" placeholder="pincode" class="form-control" [(ngModel)]="registrationModel.pincode" [class.is-invalid]="pincode.valid" required>
+
+        <div class="is-invalid" *ngIf="pincode.invalid && pincode.touched">
+        pincode is required
+       </div>
+    </div>
+    
+
+    <button type="submit">submit</button>
+</form>

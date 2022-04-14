@@ -1,0 +1,8 @@
+
+<h2>Collegues List</h2>
+<ul class="list">
+    <div *ngFor="let col of col_prop">
+        <p>first name: <span (click)="onColClicked(col)">{{col.fname}}</span></p> 
+       <p> last name:  <span (click)="onColClicked(col)">{{col.lname}}</span></p>
+    </div>
+</ul>

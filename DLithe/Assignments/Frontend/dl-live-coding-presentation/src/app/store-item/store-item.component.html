@@ -1,0 +1,12 @@
+<div class="store_item">
+    <div *ngFor="let items of item">
+        <mat-card class="cards">
+            <mat-card-title>
+                <p>Name:{{items.name}}</p>
+                <p>Price:{{items.price}}</p>
+            </mat-card-title>
+
+            <img mat-card-image class="images" [src]="items.img_path">
+        </mat-card>
+    </div>
+</div>

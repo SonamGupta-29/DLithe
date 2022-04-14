@@ -1,0 +1,112 @@
+<div class="img">
+
+
+  <div class="form">
+    <form [formGroup]="registrationForm">
+
+      
+      <div class="content">
+        <label>Name*</label>
+        <input type="text" class="form-control" formControlName="firstname">
+
+        <div
+          *ngIf="registrationForm.controls['firstname'].touched && registrationForm.controls['firstname'].hasError('required')">
+          <span class="is-invalid">Name is required</span>
+        </div>
+      </div>
+      <br>
+
+
+
+      <div class="content">
+        <label>Phone Number*</label>
+        <input type="number" class="form-control" formControlName="phoneNumber">
+
+        <div
+          *ngIf="registrationForm.controls['phoneNumber'].touched && registrationForm.controls['phoneNumber'].hasError('required')">
+          <span class="is-invalid">phone number is required</span>
+        </div>
+      </div>
+      <br>
+
+
+
+
+      <div class="content">
+        <label>Email id*</label>
+        <input type="text" class="form-control" formControlName="emailid">
+
+        <div
+          *ngIf="registrationForm.controls['emailid'].touched && registrationForm.controls['emailid'].hasError('required')">
+          <span class="is-invalid">Email id is required</span>
+        </div>
+      </div>
+      <br>
+
+
+
+
+      <div class="content">
+        <label>DOB*</label>
+        <input type="date" class="form-control" formControlName="DOB">
+
+        <div *ngIf="registrationForm.controls['DOB'].touched && registrationForm.controls['DOB'].hasError('required')">
+          <span class="is-invalid">DOB is required</span>
+        </div>
+      </div>
+      <br>
+
+
+
+      <div class="content">
+        <label> Address </label>
+        <input type="text" class="form-control" formControlName="address">
+      </div>
+      <br>
+
+
+
+      <div class="content">
+        <label>Password</label>
+        <input type="password" class="form-control" formControlName="pass">
+      </div>
+      <br>
+
+
+
+
+      
+      <div class="content">
+        <label>Confirm Password</label>
+        <input type="password" class="form-control" formControlName="cnfmpass">
+        <div *ngIf="registrationForm.errors">
+          <div *ngIf="registrationForm.errors['doNotMatch']">
+            Password do not match
+          </div>
+          </div>
+        </div>
+
+        <br>
+
+
+
+        <div class="content">
+          <label>PinCode</label>
+          <input type="number" class="form-control" formControlName="PinCode">
+
+          <div
+            *ngIf="registrationForm.controls['PinCode'].touched && registrationForm.controls['PinCode'].hasError('required')">
+            <span class="is-invalid">PinCode is required</span>
+          </div>
+        </div>
+        <br>
+
+
+        <div class="content">
+          <button type="submit" (click)="OnSubmit()">submit</button>
+        </div>
+
+      
+    </form>
+  
+  </div>
